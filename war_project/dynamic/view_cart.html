@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="{% static 'css/go_cart.css' %}">
+    <title>Document</title>
+    <style>
+        .cars2
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .cars3{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        
+    </style>
+</head>
+<body style="background-color: rgb(61, 59, 59);">
+    <div class="one">
+        
+            
+        <ul class="ul1">
+            <li class="caption">"Wounded, Not Forgotten: Help Us Mend the Lives of War Survivors."</li>
+            <a href="http://127.0.0.1:8000/"><li>Home</li></a>
+            <a href="services"><li>Our Services</li></a>
+            <a href="contact_us"><li>Contact Us</li></a>
+            <a href="about"><li>About Us</li></ul></a>
+        </ul>
+    </div>
+
+<h1>Items Added..</h1>
+<div class="cars1">
+    {% for product in cart_products %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+            <div class="card-body">
+                <h3 class="card-title">{{ product.name }}</h3>
+                <p class="card-text">{{ product.description }}</p>
+                <p class="card-text">Price: Rs<u><b>{{ product.price }}</b></u></p>
+                
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="cars2">
+    <form action="{% url 'delete_all'  %}" method="post">
+        {% csrf_token %}
+        <button type="submit"  class="btn btn-danger" style="width: 100px; height: 50px; margin-left: 60px; border: none;border-radius: 50px; background-color: rgb(108, 108, 186);">Delete All Items</button>
+    </form>
+</div>
+
+<div class="cars3">
+    <button   class="butt" style="color: aliceblue; width: 300px;">Total Payment: Rs<u><b>{{ total_payment }}</b></u></button>
+</div>
+
+<div class="cars4" style="margin-top: 70px;">
+    <button class="but"   style=" background-color: white; width: 200px; height: 100px; margin-left: 850px; font-size: x-large;"><a href="succes" style="color: blue;">PAY NOW </a></button>
+</div>

@@ -1,0 +1,80 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+.one{
+    background-color: black;
+    color: white;
+    padding-bottom: 30px;
+   
+   
+}
+.ul1{
+display: flex;
+justify-content: right;
+padding-top: 20px;
+
+
+}
+.caption{
+    margin-right:700px ;
+    font-family: fantasy;
+    font-size: xx-large;
+}
+li{
+    padding: 20px;
+    list-style-type: none;
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    
+    
+} 
+.caption:hover{
+     background-color: red;
+     border-radius: 0px;
+}
+li:hover{
+    background-color: blue;
+    border-radius: 50px;
+    
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+h1{
+    justify-content: center;
+    display: flex;
+    color: aliceblue;
+    font-family: fantasy;
+    word-spacing: 10px;
+  
+}
+.cars1{
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    height: 200px;
+    width: 290px;
+}
+.card-text{
+    font-size: large;
+}
+button{
+    width: 100px;
+    height: 50px;
+    margin-left: 60px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(2, 1, 9);
+}
+.card{
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+}
